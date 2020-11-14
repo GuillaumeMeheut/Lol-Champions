@@ -1,11 +1,11 @@
 import Head from "next/head";
 import styles from "./Layout.module.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title = "Lol Champions" }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Lol Champions</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

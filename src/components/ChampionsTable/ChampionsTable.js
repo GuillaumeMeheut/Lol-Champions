@@ -1,7 +1,7 @@
 import { KeyboardArrowDownRounded, KeyboardArrowUpRounded } from "@material-ui/icons";
 import styles from "./ChampionsTable.module.css";
 import { useState } from "react";
-import { getURL, urlObjectKeys } from "next/dist/next-server/lib/utils";
+import Link from "next/link";
 
 const orderBy = (champions, value, direction) => {
   if (value === "name" || value === "tags") {
@@ -87,24 +87,26 @@ const ChampionsTable = ({ champions }) => {
 
       {orderedChampions.map((champion) => {
         return (
-          <div
-            className={styles.row}
-            key={champion.id}
-            style={{
-              backgroundImage:
-                "url(" +
-                `https://ddragon.canisback.com/img/champion/splash/${champion.id}_0.jpg` +
-                ")",
-            }}
-          >
-            <div className={styles.name}>
-              <p>{champion.name}</p>
+          <Link href={`/champion/${champion.name}`}>
+            <div
+              className={styles.row}
+              key={champion.id}
+              style={{
+                backgroundImage:
+                  "url(" +
+                  `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg` +
+                  ")",
+              }}
+            >
+              <div className={styles.name}>
+                <p>{champion.name}</p>
+              </div>
+              <div className={styles.type}>
+                <p>{champion.tags[0]}</p>
+              </div>
+              <div className={styles.filter} />
             </div>
-            <div className={styles.type}>
-              <p>{champion.tags[0]}</p>
-            </div>
-            <div className={styles.filter} />
-          </div>
+          </Link>
         );
       })}
     </div>

@@ -5,6 +5,8 @@
   background-color: var(--background-color-dark);
   border-radius: 8px;
   padding-left: 16px;
+
+  color: var(--background-color);
 }
 
 .input {
