@@ -1,4 +1,4 @@
-import style from "./spells.module.css";
+import style from "./Spells.module.css";
 
 const Spells = ({ champion }) => {
   return (
