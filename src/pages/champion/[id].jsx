@@ -1,19 +1,24 @@
 import Layout from "../../components/Layout/Layout";
 import Spells from "../../components/Spells";
-import style from "./champion.module.css";
+import Stats from "../../components/Stats";
+import styles from "./champion.module.css";
 
 const Champion = ({ champion }) => {
   console.log(champion);
   return (
     <Layout title={champion.name}>
-      <div>
-        <h3 className={style.h3}>{champion.name}</h3>
-        <h4 className={style.h4}>{champion.title}</h4>
-        <img
-          src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
-          alt=""
-        />
-        <Spells champion={champion} />
+      <div className={styles.wrap}>
+        <div className={styles.container_left}>
+          <h3 className={styles.h3}>{champion.name}</h3>
+          <h4 className={styles.h4}>{champion.title}</h4>
+          <img
+            src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
+            alt=""
+          />
+          <Spells champion={champion} />
+        </div>
+
+        <Stats champion={champion} />
       </div>
     </Layout>
   );
