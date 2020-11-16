@@ -1,0 +1,18 @@
+.container {
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.statsContainer {
+  margin: 10px 5px 0 0;
+}
+
+.para {
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  margin: 5px;
+}

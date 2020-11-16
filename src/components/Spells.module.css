@@ -1,9 +1,33 @@
-.wrap {
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  justify-items: center;
+  align-items: flex-start;
 }
 
-.img {
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.captionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.captionImg {
   width: 54px;
+  height: 54px;
+  margin: 0 30px;
+}
+
+.captionDesc {
+  font-size: 12px;
+}
+
+.description {
+  align-self: flex-start;
 }

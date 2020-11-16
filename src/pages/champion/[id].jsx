@@ -15,11 +15,10 @@ const Champion = ({ champion }) => {
             src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
             alt=""
           />
-          <Spells champion={champion} />
         </div>
-
-        <Stats champion={champion} />
+        <Spells champion={champion} />
       </div>
+      <Stats champion={champion} />
     </Layout>
   );
 };
