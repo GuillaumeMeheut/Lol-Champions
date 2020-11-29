@@ -1,41 +1,42 @@
 import styles from "./Stats.module.css";
 
-const Stats = ({ champion }) => {
+const Stats = ({ stats }) => {
+  console.log("render stats");
   return (
     <div className={styles.container}>
       <div className={styles.statsContainer}>
         <p className={styles.para}>
-          <img className={styles.icons} src="/icons/health.png"></img> {champion.stats.hp}
+          <img className={styles.icons} src="/icons/health.png"></img> {stats.hp}
         </p>
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/armor.png"></img>
-          {champion.stats.armor}
+          {stats.armor}
         </p>
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/magicResist.png"></img>
-          {champion.stats.spellblock}
-        </p>{" "}
+          {stats.spellblock}
+        </p>
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/mana.png"></img>
-          {champion.stats.mp}
+          {stats.mp}
         </p>
       </div>
       <div className={styles.statsContainer}>
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/attack.png"></img>
-          {champion.stats.attackdamage}
+          {stats.attackdamage}
         </p>
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/range.png"></img>
-          {champion.stats.attackrange}
+          {stats.attackrange}
         </p>
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/attackSpeed.png"></img>
-          {champion.stats.attackspeed}
+          {stats.attackspeed}
         </p>
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/moveSpeed.png"></img>
-          {champion.stats.movespeed}
+          {stats.movespeed}
         </p>
       </div>
     </div>

@@ -32,7 +32,7 @@ export default function Home({ champions }) {
 export const getStaticProps = async () => {
   const response = await fetch("https://ddragon.leagueoflegends.com/api/versions.json");
 
-  const version = await response.json();
+  let version = await response.json();
 
   const res = await fetch(
     `http://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/champion.json`

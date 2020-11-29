@@ -99,10 +99,9 @@ const ChampionsTable = ({ champions }) => {
 
       {orderedChampions.map((champion) => {
         return (
-          <Link href={`/champion/${champion.id}`}>
+          <Link key={champion.key} href={`/champion/${champion.id}`}>
             <div
               className={styles.row}
-              key={champion.id}
               style={{
                 backgroundImage:
                   "url(" +

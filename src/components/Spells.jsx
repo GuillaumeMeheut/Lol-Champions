@@ -1,13 +1,13 @@
 import styles from "./Spells.module.css";
 
-const Spells = ({ champion }) => {
+const Spells = ({ champion, version }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrap}>
         <div className={styles.captionContainer}>
           <img
             className={styles.captionImg}
-            src={`http://ddragon.leagueoflegends.com/cdn/10.23.1/img/passive/${champion.passive.image.full}`}
+            src={`http://ddragon.leagueoflegends.com/cdn/${version[0]}/img/passive/${champion.passive.image.full}`}
             alt=""
           />
           <span className={styles.captionDesc}>Passive</span>
@@ -19,7 +19,7 @@ const Spells = ({ champion }) => {
         <div className={styles.captionContainer}>
           <img
             className={styles.captionImg}
-            src={`http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/${champion.spells[0].image.full}`}
+            src={`http://ddragon.leagueoflegends.com/cdn/${version[0]}/img/spell/${champion.spells[0].image.full}`}
             alt=""
           />
           <span className={styles.captionDesc}>Q</span>
@@ -30,7 +30,7 @@ const Spells = ({ champion }) => {
         <div className={styles.captionContainer}>
           <img
             className={styles.captionImg}
-            src={`http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/${champion.spells[1].image.full}`}
+            src={`http://ddragon.leagueoflegends.com/cdn/${version[0]}/img/spell/${champion.spells[1].image.full}`}
             alt=""
           />
           <span className={styles.captionDesc}>W</span>
@@ -41,7 +41,7 @@ const Spells = ({ champion }) => {
         <div className={styles.captionContainer}>
           <img
             className={styles.captionImg}
-            src={`http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/${champion.spells[2].image.full}`}
+            src={`http://ddragon.leagueoflegends.com/cdn/${version[0]}/img/spell/${champion.spells[2].image.full}`}
             alt=""
           />
           <span className={styles.captionDesc}>E</span>
@@ -52,7 +52,7 @@ const Spells = ({ champion }) => {
         <div className={styles.captionContainer}>
           <img
             className={styles.captionImg}
-            src={`http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/${champion.spells[3].image.full}`}
+            src={`http://ddragon.leagueoflegends.com/cdn/${version[0]}/img/spell/${champion.spells[3].image.full}`}
             alt=""
           />
           <span className={styles.captionDesc}>R</span>
