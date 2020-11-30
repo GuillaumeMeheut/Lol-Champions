@@ -6,12 +6,14 @@
   font-size: 40px;
   width: 64px;
   height: 64px;
-  background-color: rgb(131, 7, 7);
+  background-color: var(--yellow);
+  cursor: pointer;
 }
 
 .shopImg {
   width: 64px;
   height: 64px;
+  cursor: pointer;
 }
 
 .searchLeaveContainer {
@@ -44,9 +46,9 @@
 
   width: 300px;
 
-  background-color: red;
+  background-color: var(--text-color-secondary);
+  padding: 5px;
   border-radius: 10px;
-  border: 3px solid white;
 
   opacity: 0;
   transition: 0.3s ease-in-out;
