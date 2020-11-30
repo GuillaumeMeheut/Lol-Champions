@@ -5,7 +5,7 @@ const SearchInput = ({ ...rest }) => {
   return (
     <div className={styles.wrapper}>
       <SearchRounded />
-      <input className={styles.input} {...rest} placeholder="Filter by Name, Type"></input>
+      <input className={styles.input} {...rest}></input>
     </div>
   );
 };

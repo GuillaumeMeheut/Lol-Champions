@@ -48,6 +48,8 @@
   background-position: 50%;
   background-size: cover;
 
+  cursor: pointer;
+
   transition: 0.2s ease-in-out;
 }
 

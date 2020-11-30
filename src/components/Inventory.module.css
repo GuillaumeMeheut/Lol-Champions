@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 265px;
+  margin-left: 40px;
+}
+
+.inventory {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto;
+  justify-content: flex-start;
+  grid-gap: 12px;
+
+  width: fit-content;
+  background-color: #101b1b;
+}
+
+.inventory_itemEmpty {
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  background-color: #050d0b;
+  border: 1px solid var(--text-color-secondary);
+}
+
+.inventory_itemFilled {
+  width: 48px;
+  height: 48px;
+
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inputLvl {
+  color: #050d0b;
+  width: fit-content;
+}
+
+.gold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--yellow);
+}
+
+.goldIcon {
+  margin-left: 5px;
+}
+
+/* Shop */
+
+.shopContainer {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px 40px;
+  width: 60vw;
+  height: 60vh;
+  top: 20vh;
+  left: 20vw;
+  background-color: var(--background-color);
+
+  border: 6px solid var(--text-color-secondary);
+}
+
+.shopContainerOpen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.shopContainerClosed {
+  display: none;
+}
+
+.shopContainer::-webkit-scrollbar {
+  width: 0px;
+}

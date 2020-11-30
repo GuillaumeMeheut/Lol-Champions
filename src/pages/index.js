@@ -5,8 +5,6 @@ import Layout from "../components/Layout/Layout";
 import SearchInput from "../components/SearchInput";
 
 export default function Home({ champions }) {
-  console.log(champions);
-
   const [keyword, setKeyword] = useState("");
 
   const filteredChampions = champions.filter(
@@ -22,7 +20,7 @@ export default function Home({ champions }) {
   };
   return (
     <Layout>
-      <SearchInput onChange={onInputChange} />
+      <SearchInput onChange={onInputChange} placeholder="Filter by Name, Type" />
 
       <ChampionsTable champions={filteredChampions} />
     </Layout>

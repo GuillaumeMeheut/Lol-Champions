@@ -40,7 +40,12 @@ const Layout = ({ children, title = "Lol Champions" }) => {
 
       <main className={styles.main}>{children}</main>
 
-      <footer className={styles.footer}>Created by Guillaume Meheut</footer>
+      <footer className={styles.footer}>
+        Created by{" "}
+        <a href="https://www.guillaume-meheut.fr/" target="_blank">
+          Guillaume Meheut
+        </a>
+      </footer>
     </div>
   );
 };

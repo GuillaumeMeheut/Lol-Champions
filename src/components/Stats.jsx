@@ -6,37 +6,39 @@ const Stats = ({ stats }) => {
     <div className={styles.container}>
       <div className={styles.statsContainer}>
         <p className={styles.para}>
-          <img className={styles.icons} src="/icons/health.png"></img> {stats.hp}
+          <img className={styles.icons} src="/icons/health.png"></img>
+          {Math.round(stats.hp * 100) / 100}
+        </p>
+        <p className={styles.para}>
+          <img className={styles.icons} src="/icons/attack.png"></img>
+          {Math.round(stats.attackdamage * 100) / 100}
         </p>
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/armor.png"></img>
-          {stats.armor}
+          {Math.round(stats.armor * 100) / 100}
         </p>
         <p className={styles.para}>
-          <img className={styles.icons} src="/icons/magicResist.png"></img>
-          {stats.spellblock}
-        </p>
-        <p className={styles.para}>
-          <img className={styles.icons} src="/icons/mana.png"></img>
-          {stats.mp}
+          <img className={styles.icons} src="/icons/attackSpeed.png"></img>
+          {Math.round(stats.attackspeed * 100) / 100}
         </p>
       </div>
       <div className={styles.statsContainer}>
         <p className={styles.para}>
-          <img className={styles.icons} src="/icons/attack.png"></img>
-          {stats.attackdamage}
+          <img className={styles.icons} src="/icons/mana.png"></img>
+          {Math.round(stats.mp * 100) / 100}
         </p>
         <p className={styles.para}>
-          <img className={styles.icons} src="/icons/range.png"></img>
-          {stats.attackrange}
+          <img className={styles.icons} src="/icons/abilitypower.png"></img>
+          {Math.round(stats.abilitydamage * 100) / 100}
         </p>
         <p className={styles.para}>
-          <img className={styles.icons} src="/icons/attackSpeed.png"></img>
-          {stats.attackspeed}
+          <img className={styles.icons} src="/icons/magicResist.png"></img>
+          {Math.round(stats.spellblock * 100) / 100}
         </p>
+
         <p className={styles.para}>
           <img className={styles.icons} src="/icons/moveSpeed.png"></img>
-          {stats.movespeed}
+          {Math.round(stats.movespeed * 100) / 100}
         </p>
       </div>
     </div>

@@ -2,6 +2,25 @@
   display: flex;
 }
 
+.buttonReturn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--background-color);
+  font-weight: bold;
+  font-size: 20px;
+
+  height: 44px;
+  width: 120px;
+
+  background-color: var(--text-color-secondary);
+}
+
+.ArrowLeft {
+  font-size: 2rem;
+}
+
 .container_left {
   display: flex;
   flex-direction: column;

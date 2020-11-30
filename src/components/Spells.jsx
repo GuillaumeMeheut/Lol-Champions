@@ -1,6 +1,7 @@
 import styles from "./Spells.module.css";
 
 const Spells = ({ champion, version }) => {
+  console.log("render spells");
   return (
     <div className={styles.container}>
       <div className={styles.wrap}>

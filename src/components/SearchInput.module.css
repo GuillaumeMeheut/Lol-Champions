@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   align-items: center;
+  width: 100%;
 
   background-color: var(--background-color-dark);
   border-radius: 8px;

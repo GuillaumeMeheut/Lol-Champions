@@ -1,7 +1,7 @@
 .container {
-  margin-left: 10px;
   display: flex;
-  justify-content: flex-start;
+  width: 265px;
+  margin-left: 35px;
 }
 
 .statsContainer {
@@ -15,4 +15,6 @@
 
 .icons {
   margin: 5px;
+  height: 12px;
+  width: 12px;
 }
