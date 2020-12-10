@@ -38,7 +38,6 @@ class Inventory extends Component {
 
   render() {
     console.log("render inventory");
-    console.log(this.state.inventory);
     return (
       <div className={styles.container}>
         <div className={styles.inventory}>
@@ -66,8 +65,16 @@ class Inventory extends Component {
           })}
         </div>
         <div>
-          <p>
-            LVL: <input className={styles.inputLvl} type="number" min="1" max="18" />
+          <p className={styles.levelContainer}>
+            LVL:
+            <input
+              className={styles.inputLvl}
+              type="number"
+              min="1"
+              max="18"
+              value={this.props.level}
+              onChange={(e) => this.props.setStats(this.state.inventory, e)}
+            />
           </p>
 
           <p className={styles.gold}>

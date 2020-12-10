@@ -6,7 +6,6 @@ import Inventory from "../../components/Inventory";
 import ArrowLeft from "@material-ui/icons/ArrowLeft";
 import styles from "./champion.module.css";
 import React, { Component } from "react";
-import Link from "next/link";
 
 class Champion extends Component {
   state = {
@@ -15,33 +14,46 @@ class Champion extends Component {
     version: this.props.version,
     statsbase: this.props.champion.stats,
     stats: this.props.champion.stats,
+    level: 1,
   };
 
-  setStats = (inventory) => {
-    console.log(this.state.stats);
+  setStats = (inventory, e) => {
     let stats = Object.assign({}, this.state.statsbase);
-    let rabadon = false;
+    console.log(stats);
+    let level = this.state.level;
+    if (e) level = e.target.value;
+    console.log(level);
 
-    inventory.map((item, index) => {
-      if (item) {
-        if (item.name === "Rabadon's Deathcap") rabadon = true;
-        if (item.stats.FlatHPPoolMod) stats.hp = stats.hp + item.stats.FlatHPPoolMod;
-        if (item.stats.FlatMPPoolMod) stats.mp = stats.mp + item.stats.FlatMPPoolMod;
-        if (item.stats.FlatPhysicalDamageMod)
-          stats.attackdamage = stats.attackdamage + item.stats.FlatPhysicalDamageMod;
-        if (item.stats.FlatMagicDamageMod)
-          stats.abilitydamage = stats.abilitydamage + item.stats.FlatMagicDamageMod;
-        if (item.stats.FlatArmorMod) stats.armor = stats.armor + item.stats.FlatArmorMod;
-        if (item.stats.FlatSpellBlockMod)
-          stats.spellblock = stats.spellblock + item.stats.FlatSpellBlockMod;
-        if (item.stats.PercentAttackSpeedMod)
-          stats.attackspeed = stats.attackspeed + item.stats.PercentAttackSpeedMod;
-        if (item.stats.FlatMovementSpeedMod)
-          stats.movespeed = stats.movespeed + item.stats.FlatMovementSpeedMod;
-      }
-    });
-    if (rabadon) stats.abilitydamage = stats.abilitydamage * 1.35;
-    this.setState({ stats });
+    stats.hp = stats.hp + stats.hpperlevel * level;
+    stats.mp = stats.mp + stats.mpperlevel * level;
+    stats.attackdamage = stats.attackdamage + stats.attackdamageperlevel * level;
+    stats.armor = stats.armor + stats.armorperlevel * level;
+    stats.spellblock = stats.spellblock + stats.spellblockperlevel * level;
+    stats.attackspeed = stats.attackspeed + stats.attackspeedperlevel * level;
+
+    if (inventory) {
+      let rabadon = false;
+      inventory.map((item) => {
+        if (item) {
+          if (item.name === "Rabadon's Deathcap") rabadon = true;
+          if (item.stats.FlatHPPoolMod) stats.hp = stats.hp + item.stats.FlatHPPoolMod;
+          if (item.stats.FlatMPPoolMod) stats.mp = stats.mp + item.stats.FlatMPPoolMod;
+          if (item.stats.FlatPhysicalDamageMod)
+            stats.attackdamage = stats.attackdamage + item.stats.FlatPhysicalDamageMod;
+          if (item.stats.FlatMagicDamageMod)
+            stats.abilitydamage = stats.abilitydamage + item.stats.FlatMagicDamageMod;
+          if (item.stats.FlatArmorMod) stats.armor = stats.armor + item.stats.FlatArmorMod;
+          if (item.stats.FlatSpellBlockMod)
+            stats.spellblock = stats.spellblock + item.stats.FlatSpellBlockMod;
+          if (item.stats.PercentAttackSpeedMod)
+            stats.attackspeed = stats.attackspeed + item.stats.PercentAttackSpeedMod;
+          if (item.stats.FlatMovementSpeedMod)
+            stats.movespeed = stats.movespeed + item.stats.FlatMovementSpeedMod;
+        }
+      });
+      if (rabadon) stats.abilitydamage = stats.abilitydamage * 1.35;
+    }
+    this.setState({ stats, level });
   };
 
   render() {
@@ -49,7 +61,7 @@ class Champion extends Component {
     return (
       <Layout title={this.state.champion.name}>
         <a className={styles.buttonReturn} href={`/`}>
-          <ArrowLeft className={styles.ArrowLeft} />
+          <ArrowLeft style={{ fontSize: 34 }} />
           <p>Return</p>
         </a>
         <div className={styles.wrap}>
@@ -64,6 +76,7 @@ class Champion extends Component {
               setStats={this.setStats}
               version={this.state.version}
               items={this.state.items}
+              level={this.state.level}
             />
             <Stats stats={this.state.stats} />
           </div>

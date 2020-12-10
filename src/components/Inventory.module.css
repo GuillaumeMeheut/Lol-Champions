@@ -13,6 +13,8 @@
   justify-content: flex-start;
   grid-gap: 12px;
 
+  margin-right: 20px;
+
   width: fit-content;
   background-color: #101b1b;
 }
@@ -39,14 +41,23 @@
   cursor: pointer;
 }
 
+.levelContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .inputLvl {
-  color: #050d0b;
+  color: white;
+  background: none;
+  border: none;
+
   width: fit-content;
 }
 
 .gold {
   display: flex;
-  justify-content: center;
+
   align-items: center;
 
   font-size: 16px;

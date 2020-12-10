@@ -1,20 +1,47 @@
+@keyframes ArrowDropUp {
+  from {
+    transform: translateY(2px);
+  }
+
+  to {
+    transform: translateY(-2px);
+  }
+}
+@keyframes ArrowDropDown {
+  from {
+    transform: translateY(2px);
+  }
+
+  to {
+    transform: translateY(-2px);
+  }
+}
 .container {
-  display: flex;
-  width: 265px;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 200px;
   margin-left: 35px;
 }
-
-.statsContainer {
-  margin: 10px 5px 0 0;
-}
-
 .para {
   display: flex;
   align-items: center;
 }
 
 .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5px;
-  height: 12px;
-  width: 12px;
+}
+
+.arrowContainer {
+  width: 24px;
+  height: 24px;
+}
+
+.ArrowDropUp {
+  animation: ArrowDropUp 0.7s infinite alternate-reverse ease-in-out;
+}
+.ArrowDropDown {
+  animation: ArrowDropDown 0.7s infinite alternate-reverse ease-in-out;
 }

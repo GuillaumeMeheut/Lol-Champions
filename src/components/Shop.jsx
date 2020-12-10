@@ -9,7 +9,6 @@ class Shop extends Component {
   };
 
   render() {
-    console.log(this.props.items);
     const filteredItems = this.props.items.filter((item) =>
       item.name.toLowerCase().includes(this.state.keyword)
     );

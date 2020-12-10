@@ -15,10 +15,15 @@
   width: 120px;
 
   background-color: var(--text-color-secondary);
+  transition: 0.3s ease-in-out;
+}
+.buttonReturn:hover {
+  background-color: var(--text-color-secondary);
+  filter: brightness(1.2);
 }
 
 .ArrowLeft {
-  font-size: 2rem;
+  font-size: 40px;
 }
 
 .container_left {
