@@ -105,7 +105,7 @@ const ChampionsTable = ({ champions }) => {
               style={{
                 backgroundImage:
                   "url(" +
-                  `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg` +
+                  `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg` +
                   ")",
               }}
             >

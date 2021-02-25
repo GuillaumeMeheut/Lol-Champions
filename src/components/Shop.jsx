@@ -32,7 +32,7 @@ class Shop extends Component {
                 <img
                   className={styles.shopImg}
                   onClick={() => this.props.addItem(item)}
-                  src={`http://ddragon.leagueoflegends.com/cdn/${this.state.version}/img/item/${item.image.full}`}
+                  src={`https://ddragon.leagueoflegends.com/cdn/${this.state.version}/img/item/${item.image.full}`}
                 ></img>
                 <div className={styles.itemCaption}>
                   <p>{item.plaintext}</p>

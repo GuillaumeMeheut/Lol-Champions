@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useState } from "react";
 import ChampionsTable from "../components/ChampionsTable/ChampionsTable";
 import Layout from "../components/Layout/Layout";
@@ -33,7 +32,7 @@ export const getStaticProps = async () => {
   let version = await response.json();
 
   const res = await fetch(
-    `http://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/champion.json`
+    `https://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/champion.json`
   );
   let champions = await res.json();
 

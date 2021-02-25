@@ -13,7 +13,7 @@ class Skins extends Component {
         style={{
           backgroundImage:
             "url(" +
-            `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${this.props.champion.id}_${this.state.skinNum}.jpg` +
+            `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${this.props.champion.id}_${this.state.skinNum}.jpg` +
             ")",
         }}
       >
@@ -24,7 +24,7 @@ class Skins extends Component {
                 key={skin.num}
                 className={styles.icons}
                 onClick={() => this.setState({ skinNum: skin.num })}
-                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${this.props.champion.id}_${skin.num}.jpg`}
+                src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${this.props.champion.id}_${skin.num}.jpg`}
               ></img>
             );
           })}

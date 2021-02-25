@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height:  82px;
 }
 
 .captionContainer {
@@ -16,18 +17,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height:  82px;
+  min-width:  64px;
 }
-
-.captionImg {
-  width: 54px;
-  height: 54px;
-  margin: 0 30px;
-}
-
 .captionDesc {
   font-size: 12px;
 }
 
 .description {
   align-self: flex-start;
+  margin-left: 30px;
 }

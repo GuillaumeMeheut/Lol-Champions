@@ -55,7 +55,7 @@ class Inventory extends Component {
                   style={{
                     backgroundImage:
                       "url(" +
-                      `http://ddragon.leagueoflegends.com/cdn/${this.state.version}/img/item/${item.image.full}` +
+                      `https://ddragon.leagueoflegends.com/cdn/${this.state.version}/img/item/${item.image.full}` +
                       ")",
                   }}
                   className={styles.inventory_itemFilled}

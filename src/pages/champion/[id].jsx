@@ -94,7 +94,7 @@ export async function getStaticPaths() {
   const version = await response.json();
 
   const res = await fetch(
-    `http://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/champion.json`
+    `https://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/champion.json`
   );
 
   let champions = await res.json();
@@ -119,11 +119,11 @@ export const getStaticProps = async ({ params }) => {
   const version = await response.json();
 
   const res = await fetch(
-    `http://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/champion/${params.id}.json`
+    `https://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/champion/${params.id}.json`
   );
 
   let res2 = await fetch(
-    `http://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/item.json`
+    `https://ddragon.leagueoflegends.com/cdn/${version[0]}/data/en_US/item.json`
   );
 
   let champion = await res.json();
