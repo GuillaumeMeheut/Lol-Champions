@@ -45,5 +45,6 @@ export const getStaticProps = async () => {
     props: {
       champions,
     },
+    revalidate: 10000,
   };
 };

@@ -141,5 +141,6 @@ export const getStaticProps = async ({ params }) => {
       items,
       version,
     },
+    revalidate: 10000,
   };
 };
